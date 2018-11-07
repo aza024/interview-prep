@@ -1,4 +1,4 @@
-// reverse a string
+// #1 - reverse a string
 revStr = (str) => {
     newStr = ''
     for(let i = str.length - 1; i >= 0; i--){
@@ -6,11 +6,9 @@ revStr = (str) => {
     }
     return newStr
 }
-
 revStr('Test String')
 
-
-// interleave two strings
+// #2 - interleave two strings
 leaf = (str1, str2) => {
     newStr = ""
     for(var i = 0; i <= str1.length - 1 ; i++){
@@ -19,11 +17,9 @@ leaf = (str1, str2) => {
     }
     return newStr
 }
-
 leaf('abc','def')
 
-//return array with only even characters 
-
+// #3 - return array with only even characters 
 evenChars = (string) => {
     words = string.split(" ")
     newString = []
@@ -36,8 +32,7 @@ evenChars = (string) => {
 }
 evenChars("This is an example of my string list.")
 
-// Implement search on an array (given element of array - give index of element in arr) 
-
+// #4 - Implement search on an array (given element of array - give index of element in arr) 
 searchArr = (val, arr) => {
     for (var i =0; i < arr.length; i++){
         if(val == arr[i]){
@@ -48,8 +43,7 @@ searchArr = (val, arr) => {
 } 
 searchArr(4, [2, 3, 4, 5, 19, 4, 23, 0])
 
-// Implement search on an array (given element of array - give index of element in arr). Then take in a new parameter that gives occurance of the index for duplicates
-
+// #5- Implement search on an array (given element of array - give index of element in arr). Then take in a new parameter that gives occurance of the index for duplicates
 searchArr = (val, occur, arr) => {
     count = 0;
     for(var i = 0; i < arr.length; i++){
@@ -62,5 +56,4 @@ searchArr = (val, occur, arr) => {
     }
     return ('Not Found')
 }
-
 searchArr(2, 1, [22, 4, 8, 2, 4, 9, 27, 30])
