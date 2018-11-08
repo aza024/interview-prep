@@ -1,4 +1,4 @@
-// function takes array of characters and a map where keys are characters and values are integers - return a new map where only keys are where integer count is > 10 
+// Write a function that takes an array of characters and a map where keys are characters and values are integers - return a new map where only keys are where integer count is > 10 
 
 charCount = (arr, mapIn) => {
 
@@ -54,3 +54,21 @@ afn = (input, maps) => {
   afn(['a', 'b'], [map1, map2, map3, map4])
     
   // ])
+
+  // 1. Print count for all occurrences for every char in string 
+//   1. take in a string, produce a map of every character to the # of occurrences of that character
+//   2. afn(‘abcc’), outputs {‘a’: 1, ‘b’: 1, ‘c’: 2}
+
+charInString = (string) => {
+    map = new Map()
+    for (let i = 0; i < string.length; i++){
+      character = string[i]
+      check = map.get(character)
+      if(check === undefined){
+         map.set(character, 1)
+      } else (map.set(character, 1 + check))
+    }
+    return map 
+    }
+    
+    charInString('bananas')
