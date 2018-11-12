@@ -72,3 +72,32 @@ charInString = (string) => {
     }
     
     charInString('bananas')
+
+    // 1. Print count for all occurrences for every char in string 
+//   1. take in a string, produce a map of every character to the # of occurrences of that character
+//   2. afn(‘abcc’), outputs {‘a’: 1, ‘b’: 1, ‘c’: 2}
+
+stringCount = (string) => {
+    let map = new Map()
+    for(let j = 0; j < string.length; j++){
+      const character = string[j]
+      const inMap = map.get(character)
+  
+      if(inMap == undefined){
+        map.set(character, 1)
+      } else(map.set(character, inMap +1))
+    }
+    return map
+  }
+  
+  charInString = (strings) => {
+    let map = new Map()
+    for(let i = 0; i < strings.length; i++){
+      const string = strings[i]
+      const strMap = stringCount(string)
+      map.set(string, strMap)
+    }
+    return map
+  }
+  
+  charInString(['Bananas are yummy!', 'I like strawberries!','Apples are good!'])
